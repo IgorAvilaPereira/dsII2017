@@ -1,0 +1,14 @@
+<div style="background-color: red">
+This is <%= @foo %>
+
+<!-- https://teamtreehouse.com/community/loop-through-array-in-an-erb-template -->
+<table>
+<% @res.each do |row| %>
+  <tr>
+    <td>Name:</td>
+    <td><%= row['name'] %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+
