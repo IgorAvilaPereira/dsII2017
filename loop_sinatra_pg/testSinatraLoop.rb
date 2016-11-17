@@ -1,8 +1,14 @@
 # Install ruby
 # sudo apt-get install ruby-full
+# Windows
+# https://rubyinstaller.org/downloads/
 
 # Install sinatra
 # sudo apt-get install ruby-sinatra
+
+# Windows
+# https://asked.io/how-to-install-sinatra-on-windows
+# gem install sinatra
 
 # Executar: 
 # ruby testSinatra.rb 
@@ -13,6 +19,11 @@
 # sudo apt-get install libpq-dev
 # gem install pg  --   --with-pg-lib=/usr/lib   
 
+# Windows
+# https://marcclifton.wordpress.com/2012/11/12/installing-postgresql-for-use-with-ruby-in-windows/
+
+
+# https://code.tutsplus.com/tutorials/singing-with-sinatra--net-18965
 require 'sinatra' 
 require 'sinatra/base'
 # templates
