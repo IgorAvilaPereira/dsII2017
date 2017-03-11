@@ -1,10 +1,9 @@
-# Install ruby
+# Instalar ruby
 #iapereira@inspiron5448:~$ sudo apt-get install ruby-full
-# Install sinatra
+# Instalar sinatra
 # iapereira@inspiron5448:~$ sudo apt-get install ruby-sinatra
-# Executar: iapereira@inspiron5448:~$ ruby testSinatra.rb 
+# Executar: ruby testSinatra.rb 
 require 'sinatra' 
-
 require 'sinatra/base'
 require 'erb'
 

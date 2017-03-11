@@ -2,7 +2,6 @@
 # sudo apt-get install libpq-dev
 # gem install pg  --   --with-pg-lib=/usr/lib   
 # https://deveiate.org/code/pg/PG/Connection.html
-
 # Windows
 # https://marcclifton.wordpress.com/2012/11/12/installing-postgresql-for-use-with-ruby-in-windows/
 
