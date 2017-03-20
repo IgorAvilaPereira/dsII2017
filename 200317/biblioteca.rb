@@ -1,0 +1,43 @@
+def heitorInsta(vLikes = [2, 100, 200])
+	tamanho = vLikes.size
+	i = 0
+	soma = 0
+	while i < tamanho
+		soma = soma + vLikes[i]
+		i = i + 1		
+	end
+	soma	
+end
+
+def soma (n1, n2 = 0)
+	n1 + n2
+end
+
+def fatorial(n)	
+	resultado = 1
+	while (n > 1)
+		resultado = resultado * n
+		n = n - 1
+	end
+	resultado
+end
+
+=begin
+puts "Digite o nro1:"
+nro1 = gets.to_i
+
+puts "Digite o nro2:"
+nro2 = gets.to_i
+soma = 0
+if (nro2 == 0)
+	soma = soma(nro1)
+else
+	soma = soma(nro1, nro2)
+end
+puts "Resultado:"+ soma.to_s 
+
+puts fatorial(gets.to_i)
+=end
+ 
+
+puts "Igor Insta sdufhsdiufhsd Birl!!!:"+heitorInsta([1]).to_s
