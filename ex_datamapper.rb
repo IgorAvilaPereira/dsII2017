@@ -1,9 +1,9 @@
 require 'rubygems'
 
-# sudo apt-get install postgresql-server-dev-all 
-# sudo apt-get install libpq-dev
-# sudo gem install dm-postgres-adapter
 # sudo gem install data_mapper
+# sudo apt-get install libpq-dev
+# sudo apt-get install postgresql-server-dev-all 
+# sudo gem install dm-postgres-adapter
 
 require 'data_mapper' 
 
