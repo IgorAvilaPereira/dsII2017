@@ -10,6 +10,7 @@ require 'data_mapper'
 require 'dm-migrations'
 
 # Conexao PostgreSQL:
+#DataMapper.setup(:default, 'postgres://<user>:<senha>@<host>/<banco>')
 DataMapper.setup(:default, 'postgres://postgres:postgres@localhost/testactiverecord')
  
 # Conexao SQL3lite
