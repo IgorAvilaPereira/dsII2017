@@ -1,0 +1,6 @@
+<ul>
+<% @vetPost.each do |post| %>
+   <li> <a href="/excluir/<%= post.id %>"> Excluir </a> <a href="/tela_alterar/<%= post.id %>"> Alterar </a>  <%= post.title %>  </li>
+<%end %>
+</ul>
+<a href="/tela_adicionar"> Adicionar </a>
