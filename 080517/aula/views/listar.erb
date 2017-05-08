@@ -1,0 +1,25 @@
+<html>
+	<head>
+	</head>
+<body>
+	<table border="1">
+		<tr> 
+			<td> Excluir </td>
+			<td> Alterar </td>
+			<td> id </td>
+			<td> nome </td>
+			<td> especie </td>
+		</tr>
+
+		<% @vetAnimal.each do |animal| %>
+		<tr> 
+<td> <a href="/excluir/<%= animal.id %>"> Excluir </a></td>
+<td> <a href="/tela_alterar/<%= animal.id %>"> Alterar </a></td>
+			<td> <%= animal.id %> </td>
+			<td> <%= animal.nome %> </td>
+			<td> <%= animal.especie %> </td>
+		</tr>
+		<% end %>
+	</table>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./css/estilo.css">
+	</head>
+<body>
+	<%= @m %> <br>
+	<form action='/adicionar' method='post'>
+		Nome: <input type='text' name='nome'> <br>
+		Especie: <input type="text" name="especie">
+		<input type='submit'> 
+	</form>
+	<a href="/listar"> Listar </a>
+	<button onclick="location.href='/listar'">Listar</button>
+</body>
+</html>
