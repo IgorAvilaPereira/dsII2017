@@ -9,8 +9,6 @@ require 'erb'
 require 'data_mapper' 
 require 'dm-migrations'
 
-#set :views, '/views'
-
 # Conexao PostgreSQL:
 #DataMapper.setup(:default, 'postgres://<user>:<senha>@<host>/<banco>')
 DataMapper.setup(:default, 'postgres://postgres:postgres@localhost/teste')
