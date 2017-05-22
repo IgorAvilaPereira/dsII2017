@@ -79,6 +79,7 @@ end
 
 
 # email
+# <email>, <senha> e <destinatario> devem ser modificados....
 get '/email' do  
   Pony.options = {
       :subject => "Assunto",
@@ -88,13 +89,13 @@ get '/email' do
         :address              => 'smtp.gmail.com',
         :port                 => '587',
         :enable_starttls_auto => true,
-        :user_name            => 'tadsifrsrg@gmail.com ',
-        :password             => "tadsifrsrgtadsifrsrg",
+        :user_name            => '<email>@gmail.com',
+        :password             => "<senha>",
         :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
         :domain               => "localhost.localdomain"
       }
     }
-    Pony.mail(:to => "igor.pereira@riogrande.ifrs.edu.br")
+    Pony.mail(:to => "<destinatario>")
     redirect '/'
 end
 
