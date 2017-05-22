@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- titulo da pagina -->
+		<title>Layout da Laura</title>
+
+		<!-- Bootstrap -->
+		<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+		<!-- Jquery -->
+		<script src="/vendor/jquery-1.9.1.min.js"></script>
+    	
+    	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	</head>
+	<!-- corpo -->
+	<body>
+		<!-- menu entendi -->
+		<table>
+			<tr> 
+				<!-- menu 1 -->
+				<td> <a class="btn btn-primary" href="/"> Home </a> </td>
+				<!-- menu 2 -->
+				<td> <a class="btn btn-primary" href="/mostra"> Mostra </a></td>
+				<!-- menu 3 -->
+				<td> <a class="btn btn-primary" href="/mudanca"> Mudança </a></td>
+				<!-- menu 4 -->
+				<td> <a class="btn btn-primary" href="/remove"> Remove </a></td>
+			</tr>
+		</table>
+		<br>
+	<!-- vai cair toda a rota aqui -->
+	<div style="border: 20px solid blue">
+		<%= yield %>	
+	</div>
+  </body>
+</html>
