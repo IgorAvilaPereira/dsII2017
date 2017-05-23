@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		// https://www.w3schools.com/xml/ajax_intro.asp
+
+			function criaObjetoAjax(){
+				if (window.XMLHttpRequest) {
+					// modern browsers
+					xmlhttp = new XMLHttpRequest();
+				} else {
+					// old IE browsers
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				return xmlhttp;
+			}	
+			function testando(){
+
+				var parametro = prompt("Digite alguma coisa:");
+
+				var xhttp = criaObjetoAjax();
+
+			    xhttp.onreadystatechange = function() {
+
+			        if (this.readyState == 4 && this.status == 200) {
+			            alert(this.responseText);
+			        }
+			    };
+
+
+			    xhttp.open("GET", "/recebe/"+parametro, true);
+
+			    //xhttp.open("POST", "ajax_test.asp", true);
+				//xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				//xhttp.send("fname=Henry&lname=Ford");
+			    
+			    xhttp.send(); 
+			}
+		</script>
+	</head>
+<body>
+	<button onclick="testando()">Testando</button>
+</body>	
+</html>
