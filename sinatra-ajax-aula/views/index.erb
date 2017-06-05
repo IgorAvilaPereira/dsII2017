@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		// https://www.w3schools.com/xml/ajax_intro.asp
+
+			function criaObjetoAjax(){
+				if (window.XMLHttpRequest) {
+					// modern browsers
+					xmlhttp = new XMLHttpRequest();
+				} else {
+					// old IE browsers
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				return xmlhttp;
+			}	
+
+
+			function buscar(){
+
+				
+
+				var xhttp = criaObjetoAjax();
+
+	    xhttp.onreadystatechange = function() {
+
+	        if (this.readyState == 4 && this.status == 200) {
+
+	            document.getElementById('ninguemEntendeu').innerHTML = this.responseText;
+	        }
+	    };
+
+
+			    xhttp.open("GET", "/buscar/"+document.getElementById("campoBuscar").value, true);
+
+			    //xhttp.open("POST", "ajax_test.asp", true);
+				//xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				//xhttp.send("fname=Henry&lname=Ford");
+			    
+			    xhttp.send(); 
+			}
+
+
+			function listar(){
+
+				
+
+				var xhttp = criaObjetoAjax();
+
+	    xhttp.onreadystatechange = function() {
+
+	        if (this.readyState == 4 && this.status == 200) {
+
+	            document.getElementById('ninguemEntendeu').innerHTML = this.responseText;
+	        }
+	    };
+
+
+			    xhttp.open("GET", "/listar", true);
+
+			    //xhttp.open("POST", "ajax_test.asp", true);
+				//xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				//xhttp.send("fname=Henry&lname=Ford");
+			    
+			    xhttp.send(); 
+			}
+
+			function testando(){
+
+				var parametro1 = prompt("Digite alguma coisa:");
+
+				var parametro2 = prompt("Digite alguma coisa:");
+
+				var xhttp = criaObjetoAjax();
+
+	    xhttp.onreadystatechange = function() {
+
+	        if (this.readyState == 4 && this.status == 200) {
+
+	            document.getElementById('ninguemEntendeu').innerHTML = this.responseText;
+	        }
+	    };
+
+
+			    xhttp.open("GET", "/recebe/"+parametro1+"/"+parametro2, true);
+
+			    //xhttp.open("POST", "ajax_test.asp", true);
+				//xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				//xhttp.send("fname=Henry&lname=Ford");
+			    
+			    xhttp.send(); 
+			}
+		</script>
+	</head>
+<body>
+Buscar: <input type="text" id="campoBuscar">
+<button onclick="buscar()">Buscar</button>
+
+	<button onclick="testando()">Testando</button>
+	<div id="ninguemEntendeu">
+
+	</div>
+<a href="javascript:void(0)" onclick="listar()"> Listar </a>
+
+</body>	
+</html>
