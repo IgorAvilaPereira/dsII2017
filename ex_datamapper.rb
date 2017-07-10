@@ -1,12 +1,10 @@
 require 'rubygems'
-
 # sudo gem install data_mapper
 # sudo apt-get install libpq-dev
 # sudo apt-get install postgresql-server-dev-all 
 # sudo gem install dm-postgres-adapter
 
 require 'data_mapper' 
-
 require 'dm-migrations'
 
 # Conexao PostgreSQL:
@@ -36,8 +34,8 @@ DataMapper.auto_upgrade!
 
 
 # adicionar
-@post = Post.new(:title => "testedatamappper")
-@post.save # persist the resource
+post = Post.new(:title => "testedatamappper")
+post.save # persist the resource
 
 # remover
 post2 = Post.get(1)
@@ -51,7 +49,9 @@ vetPost.each do |p|
 	puts p.title
 end
 
-# atualizar
-post3 = Post.get(2)
-post3.update(:title => 'Funky Town Municipal Zoo')
 
+# atualizar
+post3 = Post.get(3)
+if post3.nil? == false 
+	post3.update(:title => 'Funky Town Municipal Zoo')	
+end
