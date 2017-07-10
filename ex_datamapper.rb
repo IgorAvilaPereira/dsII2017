@@ -51,7 +51,7 @@ end
 
 
 # atualizar
-post3 = Post.get(1)
+post3 = Post.get(3)
 if post3.nil? == false 
 	post3.update(:title => 'Funky Town Municipal Zoo')	
 end
