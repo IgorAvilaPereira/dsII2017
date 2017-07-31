@@ -1,0 +1,9 @@
+<ul>
+	<% @vet.each do |professor| %>
+		<li> <a href="/excluir/<%=professor.id %>"> Excluir </a> -- 
+		<a href="/tela_alterar/<%=professor.id %>"> Alterar </a> 
+		-- <%= professor.nome %> -- <%= professor.apelido %> </li>
+	<% end %>
+</ul>
+
+<a href="/tela_adicionar"> Adicionar </a>
