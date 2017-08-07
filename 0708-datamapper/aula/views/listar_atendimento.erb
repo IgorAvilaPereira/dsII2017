@@ -1,0 +1,16 @@
+<h1> Atendimentos </h1>
+
+<ul>
+	<% @vet.each do |atendimento| %>
+		<li> <a href="/excluir_atendimento/<%=atendimento.id %>"> Excluir </a> -- 
+		<a href="/tela_alterar_atendimento/<%=atendimento.id %>"> Alterar </a> 
+		-- 
+		<a href="/tela_incorporar_aluno/<%=atendimento.id%>"> Incorporar Aluno </a>
+		-- <%= atendimento.dataHora %> </li>
+	<% end %>
+</ul>
+
+<a href="/tela_adicionar_atendimento"> Adicionar </a>
+
+
+

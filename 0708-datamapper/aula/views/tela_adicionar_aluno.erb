@@ -1,0 +1,14 @@
+<form action="/adicionar_aluno" method="post">
+	Nome: <input type="text" name="nome">
+	
+	<select name="professor_id">
+
+<% @vetProfessor.each do |professor| %>
+	<option value="<%=professor.id%>"><%=professor.nome%></option>
+<% end %>
+
+</select>
+
+
+	<input type="submit" value="botao">
+</form>

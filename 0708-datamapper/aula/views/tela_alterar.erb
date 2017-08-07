@@ -1,0 +1,10 @@
+<form action="/alterar" method="post">
+	Nome: <input type="text" name="nome" value="<%= @professor.nome %>">
+	<br>
+	Apelido: <input type="text" name="apelido" value="<%= @professor.apelido %>">
+	<br>
+	<input type="hidden" name="id"
+	value="<%= @professor.id %>">
+
+	<input type="submit" value="botao">
+</form>

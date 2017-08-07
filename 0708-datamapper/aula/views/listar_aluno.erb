@@ -1,0 +1,20 @@
+<table border="1">
+	<% @vet.each do |aluno| %>
+	<tr>
+		<td> 
+			<a href="/excluir_aluno/<%=aluno.id %>"> Excluir </a> 
+		</td>		
+		<td>
+			<a href="/tela_alterar_aluno/<%=aluno.id %>"> Alterar </a> 
+		</td>
+		<td>
+			<%= aluno.nome %> 
+		</td>
+		<td>
+			<%= aluno.professor.nome %>
+		</td>
+	<% end %>
+	</tr>
+</table>
+
+<a href="/tela_adicionar_aluno"> Adicionar Aluno </a>
