@@ -2,12 +2,12 @@ require 'tk'
 
 root = TkRoot.new { title "Hello, World!" }
 entry1 = TkEntry.new(root)
-entry1.place('height' => 25, 'width'  => 150, 'x'   => 10, 'y'   => 10)
+entry1.place('height' => 25, 'width'  => 100, 'x'   => 20, 'y'   => 15)
 
 
 TkLabel.new(root) do
-   text 'Hello, World!'
-   pack { padx 15 ; pady 15; side 'left' }
+   text 'Digite:'
+   pack { padx 15 ; pady 30; side 'left' }
 end
 
 # acao de um botao...
@@ -18,9 +18,6 @@ def actionTkButton(root)
 	puts "The user says OK."
 	#exit
 end
-
-
-
 
 btn_OK = TkButton.new(root) do
    text "OK"
@@ -38,12 +35,17 @@ btn_OK = TkButton.new(root) do
 
    # acao de um botao - metodo 2
    command {
-   		variable1 = TkVariable.new
-		entry1.textvariable = variable1
-		variable1.value = "Testando...."
-   		print "push button2!!\n" +  variable1.value
+   		# pegando o valor do entry
+   		#variable1 = TkVariable.new
+		#entry1.textvariable = variable1
+		# setando um valor
+		#variable1.value = "Testando...."
+		# inserindo...
+		entry1.insert(0, "oi") 
+		# retornando..
+  		print entry1.get + " \n\n\n push button2!!\n"   	
    }
-   pack("side" => "left",  "padx"=> "50", "pady"=> "10")
+   pack("side" => "left",  "padx"=> "50", "pady"=> "40")
 end
 
 Tk.mainloop
