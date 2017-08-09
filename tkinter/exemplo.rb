@@ -1,9 +1,9 @@
 require 'tk'
 
 root = TkRoot.new { title "Hello, World!" }
+
 entry1 = TkEntry.new(root)
 entry1.place('height' => 25, 'width'  => 100, 'x'   => 20, 'y'   => 15)
-
 
 TkLabel.new(root) do
    text 'Digite:'
@@ -43,6 +43,12 @@ btn_OK = TkButton.new(root) do
 		# inserindo...
 		entry1.insert(0, "oi") 
 		# retornando..
+		msgBox = Tk.messageBox(
+		   'type'    => "ok",  
+		   'icon'    => "info", 
+		   'title'   => "This is title",
+		   'message' => entry1.get
+		)
   		print entry1.get + " \n\n\n push button2!!\n"   	
    }
    pack("side" => "left",  "padx"=> "50", "pady"=> "40")
