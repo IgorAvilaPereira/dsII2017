@@ -1,4 +1,6 @@
 require 'tk'
+#require 'tkextlib/bwidget'
+
 
 root = TkRoot.new { title "Hello, World!" }
 
@@ -9,7 +11,14 @@ TkLabel.new(root) do
    text 'Digite:'
    pack { padx 15 ; pady 30; side 'left' }
 end
-
+=begin
+combobox = Tk::BWidget::ComboBox.new(root)
+combobox.values = [1, 2, 3, 4]
+combobox.place('height' => 25, 
+               'width'  => 100, 
+               'x'   => 10, 
+               'y'   => 10 )
+=end
 # acao de um botao...
 def actionTkButton(root)
 	#variable1 = TkVariable.new
@@ -31,6 +40,13 @@ end
 list.insert 0, "yellow", "gray", "green",
   "blue", "red", "black", "white", "cyan",
   "pink", "yellow", "orange", "gray"
+
+Sb = TkSpinbox.new(root) do
+   to 100
+   from 5
+   increment 5
+   pack("side" => "left",  "padx"=> "50", "pady"=> "50")
+end
 
 btn_OK = TkButton.new(root) do
    text "OK"
