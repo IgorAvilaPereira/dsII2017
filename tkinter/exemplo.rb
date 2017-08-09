@@ -19,6 +19,19 @@ def actionTkButton(root)
 	#exit
 end
 
+
+list = TkListbox.new(root) do
+   width 20
+   height 10
+   setgrid 1
+   selectmode 'multiple'
+   pack('fill' => 'x')
+end
+
+list.insert 0, "yellow", "gray", "green",
+  "blue", "red", "black", "white", "cyan",
+  "pink", "yellow", "orange", "gray"
+
 btn_OK = TkButton.new(root) do
    text "OK"
    borderwidth 5
@@ -50,8 +63,11 @@ btn_OK = TkButton.new(root) do
 		   'message' => entry1.get
 		)
   		print entry1.get + " \n\n\n push button2!!\n"   	
+  		print list.get(list.curselection[0])
    }
    pack("side" => "left",  "padx"=> "50", "pady"=> "40")
 end
+
+
 
 Tk.mainloop
