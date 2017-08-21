@@ -19,6 +19,7 @@ combobox.place('height' => 25,
                'x'   => 10, 
                'y'   => 10 )
 =end
+
 # acao de um botao...
 def actionTkButton(root)
 	#variable1 = TkVariable.new
