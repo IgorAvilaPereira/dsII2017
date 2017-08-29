@@ -2,7 +2,7 @@ require 'tk'
 require 'tkextlib/bwidget'
 
 root = TkRoot.new
-root.title = "Window"
+root.title = "Janela"
 
 combobox = Tk::BWidget::ComboBox.new(root)
 combobox.values = [1, 2, 3, 4]
@@ -26,7 +26,7 @@ btn_OK = TkButton.new(root) do
 end
 
 def myproc(combobox)
-   puts "The user says OK." + combobox.text
+   puts "The user says OK." + combobox.text  
    # exit
 end
 
