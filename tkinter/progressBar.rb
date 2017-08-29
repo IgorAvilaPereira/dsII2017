@@ -20,6 +20,7 @@ end
 
 def myproc(variable)
    puts "The user says OK." + variable.value 
+   # modificando o valor
    variable.value  = 100
    puts "The user says OK." + variable.value 
    # exit
